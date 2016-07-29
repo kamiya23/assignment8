@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>---JQuery Animation slide---</title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        <style type="text/css">
+            #theDiv {
+                border: 2px solid #555;
+               height:500px;
+                width:700px;
+                padding:10px;
+                
+               
+            }
+            #snum ul {
+                 list-style-type: none;   
+            }
+            #snum ul li{
+                float: left;
+                margin: 10px;
+            }
+            #snum ul li a{
+                text-decoration: none;
+                display: block;
+            }
+            
+        </style>
+        
+        <link href="styles/main.css" type="text/css" rel="stylesheet" />
+        
+        <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+        
+        <!--JQuery method of working with animation -->
+        
+          <script type="text/javascript">
+            $('document').ready(function(){ 
+                
+             if($('#snum .c1').click(function(){
+                 $("theDiv").css('background-image', 'url(images/home1.jpg)');
+                $("theDiv").show(1500);
+                 
+                 
+             })
+                
+           
+            });
+         </script>
+    </head>
+    
+    <body>
+      <h1> Slide</h1>
+     
+       <!--<div id="theDiv">
+           <ul class="rslides">
+              <li><img src="images/home1.jpg" alt="Turtle 1"></li>
+              <li><img src="images/home2.jpg" alt="Turtle 2"></li>
+              <li><img src="images/home3.jpg" alt="Turtle 3"></li>
+              <li><img src="images/home4.jpg" alt="Turtle 4"></li>
+            </ul>
+        </div>-->
+        
+        <div class="div1"><img src="images/home1.jpg" alt="Turtle 1"></div>
+        <div class="div2"><img src="images/home2.jpg" alt="Turtle 1"></div>
+        <div class="div3"><img src="images/home3.jpg" alt="Turtle 1"></div>
+        <div class="div4"><img src="images/home4.jpg" alt="Turtle 1"></div>
+        <div id="theDiv"></div>
+       
+      <div id="snum">
+           <ul >
+              <li><a class="c1" href="#" />01</li>
+              <li><a class="c2" href="#" />02</li>
+               <li><a class="c3" href="#" />03</li>
+               <li><a class="c4" href="#" />04</li>
+               
+            </ul>
+       
+        </div>
+
+       
+    
+    </body>
+    
+</html>

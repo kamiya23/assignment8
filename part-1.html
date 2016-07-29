@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>---JQuery method of working with radio buttons---</title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        
+        <link href="styles/main.css" type="text/css" rel="stylesheet" />
+        
+        
+        <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+        
+        
+        
+        <script type="text/javascript">
+            $('document').ready(function(){   
+               /*//STEP 1
+                $('#button1').click(function(){
+                  window.alert("Display button has been clicked");
+                });*/
+                
+                /*//STEP 2
+                $("#button1").bind("click", function(event) {	window.alert("Display button has been clicked with .bind method");
+                });*/
+                
+                /*//STEP 3
+                $("#button1").on("click", function(event) {	window.alert("Display button has been clicked with .on method");
+                });*/
+                
+                /*//STEP 4
+                $("#button1, #button2").on("click", function(event) {	window.alert("Display button has been clicked with .on method");
+                });*/
+                
+                /*//STEP 5 
+                $('#step5').css({'width':'400px', 'height':'400px', 'border':'solid 2px black'});
+                
+                $("#step5").on("click mouseenter mouseleave", function(event) {
+                    window.alert("User clicked, mouse entered or mouse left in div");
+                });  */
+                
+               /* //STEP 5
+                $('#step5').css({'width':'400px', 'height':'400px', 'border':'solid 2px black'});
+                
+                $("#step5").on({
+                    mouseenter: function() {alert("The Mouse entered the div!");},
+                    mouseleave: function() {alert("The mouse left the div!");},
+                    click: function() {alert("You clicked on the div!");}
+                });*/
+                
+               /* //STEP 6
+                 $('#step5').css({'width':'400px', 'height':'400px', 'border':'solid 2px black'});
+                
+                $("#step5").on({
+                    mouseenter: function() { $("#step5").append("<span> The Mouse entered the div! </span>");},
+                    mouseleave: function() { $("#step5").append("<span> The mouse left the div! </span>");},
+                    click: function() { $("#step5").append("<span> You clicked on the div! </span>");}
+                                 
+                });*/
+                
+                //STEP 7
+                
+                $('a').css('color', 'red');
+                
+                
+                //STEP 8
+                $(window).resize(function() {
+                 $("#res").text($(window).width());
+                    
+                });
+                
+                //STEP 9
+                $('#tbox').focusin(function(){
+                    $('#tbox').css('background-color', '#ccc');
+                });
+                $('#tbox').focusout(function(){
+                    $('#tbox').css('background-color', 'white');
+                });
+                
+               /*//STEP 10
+                $('#submit').click(function(){
+                 var nam = $('#name').val(); 
+                var em = $('#email').val();
+                    alert(nam, em);
+                    }
+                });*/
+            
+            });
+        </script>
+        
+    </head>
+    
+    <body>
+        <h2>Assignment 8 - Part 1</h2>
+      <form action="#">
+            <input type="button" value="Display Button" id="button1" />
+                
+            <input type="button" value=" Button 2 " id="button2" />
+               
+            <div id="step5"></div>
+          <a href="www.google.com">Link for Google</a>
+          
+          <div id="res"></div>
+          
+          <label>
+                 TextBox: <input type="text" id="tbox" />
+            </label>
+          
+          <label>
+                 Name: <input type="text" id="name" />
+            </label>
+          <label>
+                 Email: <input type="text" id="email" />
+            </label>
+          <button id="submit">Submit</button>
+       </form>
+    
+    </body>
+    
+</html>

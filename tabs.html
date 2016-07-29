@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Assignment 8 Part-2 Tabs</title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        
+      
+        
+<style type="text/css">
+
+
+#descrip{
+     margin:0 auto;
+    width:85%;
+    
+    border:solid 2px #ccc;
+    min-height: 320px;
+    padding:15px 5px 10px 10px;
+   
+}
+
+#tabLinks{
+    width:100%;
+    list-style-type: none;
+     background-color: darkgray;  
+    padding: 10px 0 0 5px;
+    border-radius: 5px;
+}
+
+#tabLinks li{
+    display:inline;
+    background-color: lightgrey;
+    //border-width:solid 2px #ccc;
+    border-bottom: none;
+    margin-right: 1px;
+    padding:5px 4px 0 4px;
+    border-radius: 4px;
+  
+}
+
+#tabLinks a{
+    text-decoration: none;
+    display: inline-block;
+    //padding:15px 4px;
+    color:#666;
+} 
+#tabLinks a:hover{
+   // background-color: black;
+    color:black;
+   
+}
+#tabLinks li.current{
+    background-color: #fff;
+}
+</style>
+        
+        <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+            $('#descrip article:not(:first)').hide();
+    
+            $('#tabLinks li').click(function(e){   // to invoke click 
+            $('#descrip article').hide();     //hide all li
+            $('#tabLinks, current').removeClass("current");
+            $(this).addClass('current');
+            var clicked=$(this).find('a:first').attr('href');
+            $('#descrip '+ clicked).fadeIn('fast');
+                e.preventDefault();
+            });
+    
+            });
+        </script>
+        
+    </head>
+    
+    <body>
+       
+        
+        
+        <main>
+          <div id="tabWrapper">
+            <section id="descrip">
+         
+             <ul id="tabLinks">
+                <li class="current"><a href="#loc">Learning OutComes</a></li>
+                <li><a href="#lm">Learning Module</a></li>
+                <li><a href="#ib">Instructor Bio</a></li>
+                 
+          </ul>
+           
+          
+
+            <article class="article-interior" id="loc">
+                <h2>Learning OutComes</h2>
+                
+               
+                <p> Vivamus auctor elementum malesuada. Donec luctus, massa in tincidunt molestie, nisi lorem varius ante, eu pulvinar nibh libero lacinia tellus. Aliquam ornare tincidunt massa, a malesuada justo maximus vel. Fusce viverra auctor lorem a rutrum. Morbi lorem urna, sollicitudin ac mi quis, pharetra consequat nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. finibus ut turpis quis, sodales ullamcorper nisl. Sed faucibus laoreet ex, laoreet ultricies leo interdum in. Suspendisse nec molestie libero, non volutpat risus. Maecenas lacinia tortor enim, non malesuada lectus ullamcorper vel. Integer velit dolor, semper vel nisl ac, luctus pulvinar lorem. Etiam leo felis, aliquam at nunc et, luctus interdum metus. Vestibulum ultrices nunc vel mauris convallis, uht ultrices nunc viverra. In ex tellus, lobortis non consectetur ac, sollicitudin in odio.</p>
+               
+                 
+            </article>
+            
+            <article class="article-interior" id="lm">
+                
+                <h2>Learning Module</h2>
+               
+                    <p> Donec suscipit ac nunc in sagittis. Nullam varius tempus     dolor ut rutrum. Phasellus ac velit quis dolor egestas facilisis ac et tellus. Morbi sagittis lorem quis hendrerit ultricies. Morbi semper interdum tortor et porta. Fusce in tempor nunc. Vivamus rutrum laoreet pharetra. Nam placerat tristique tortor a suscipit.</p>
+
+                       <p> Nulla felis sapien, finibus ut turpis quis, sodales ullamcorper nisl. Sed faucibus laoreet ex, laoreet ultricies leo interdum in. Suspendisse nec molestie libero, non volutpat risus. Maecenas lacinia tortor enim, non malesuada lectus ullamcorper vel. Integer velit dolor, semper vel nisl ac, luctus pulvinar lorem. Etiam leo felis, aliquam at nunc et, luctus interdum metus. Vestibulum ultrices nunc vel mauris convallis, ut ultrices nunc viverra. In ex tellus, lobortis non consectetur ac, sollicitudin in odio.
+                    </p>
+
+            </article>
+            
+            <article class="article-interior" id="ib">
+                
+                <h2>Instructor Bio</h2>
+                
+                    <p> Donec suscipit ac nunc in sagittis. Nullam varius tempus     dolor ut rutrum. Phasellus ac velit quis dolor egestas facilisis ac et tellus. Morbi sagittis lorem quis hendrerit ultricies. Morbi semper interdum tortor et porta. Fusce in tempor nunc. Vivamus rutrum laoreet pharetra. Nam placerat tristique tortor a suscipit.</p>
+
+                      <p>  Nulla felis sapien, finibus ut turpis quis, sodales ullamcorper nisl. Sed faucibus laoreet ex, laoreet ultricies leo interdum in. Suspendisse nec molestie libero, non volutpat risus. Maecenas lacinia tortor enim, non malesuada lectus ullamcorper vel. Integer velit dolor, semper vel nisl ac, luctus pulvinar lorem. Etiam leo felis, aliquam at nunc et, luctus interdum metus. Vestibulum ultrices nunc vel mauris convallis, ut ultrices nunc viverra. In ex tellus, lobortis non consectetur ac, sollicitudin in odio.
+                    </p>
+
+            </article>
+            
+             
+            </section>
+          </div>
+        </main>
+        <footer>
+            
+        </footer>
+    
+    </body>
+    
+</html>
